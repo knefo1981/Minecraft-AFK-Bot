@@ -2,12 +2,12 @@ const mineflayer = require('mineflayer');
 const config = require('./config.json');
 
 const bot = mineflayer.createBot({
-  host: config.serverHost,
-  port: config.serverPort,
-  username: config.botUsername,
+  host: config.xlion.seedloaf.gg,
+  port: config.49385,
+  username: config.MYbotfor247,
   auth: 'offline',
   version: false,
-  viewDistance: config.botChunk
+  viewDistance: config.4
 });
 
 let movementPhase = 0;
@@ -18,7 +18,7 @@ const JUMP_DURATION = 500;
 bot.on('spawn', () => {
   setTimeout(() => {
     bot.setControlState('sneak', true);
-    console.log(`✅ ${config.botUsername} is Ready!`);
+    console.log(`✅ ${config.MYbotfor247} is Ready!`);
   }, 3000);
 
   setTimeout(movementCycle, STEP_INTERVAL);
